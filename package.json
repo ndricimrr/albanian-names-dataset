@@ -1,0 +1,26 @@
+{
+  "name": "albanian-names-dataset",
+  "version": "0.0.2",
+  "description": "A curated list of albanian names for easy usage in open source projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ndricimrr/albanian-names-dataset.git"
+  },
+  "keywords": [
+    "dataset",
+    "albanian-dataset",
+    "albanian-name-library",
+    "name",
+    "dataset"
+  ],
+  "author": "Ndricim Rrapi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ndricimrr/albanian-names-dataset/issues"
+  },
+  "homepage": "https://github.com/ndricimrr/albanian-names-dataset#readme"
+}
