@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  run-script:
+  check-duplicate-names:
     runs-on: ubuntu-latest
 
     steps:
