@@ -14,4 +14,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run JS script for quality
-        run: node scripts/code_quality.js
+        run: node scripts/duplicates_check.js
