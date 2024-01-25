@@ -1,3 +1,5 @@
+import { all_names } from "..";
+
 function hasDuplicateStrings(array) {
   const seen = {};
 
@@ -12,8 +14,4 @@ function hasDuplicateStrings(array) {
   return false;
 }
 
-// Example usage:
-const names1 = ["John", "Adam", "John"];
-const names2 = ["Alice", "Bob", "Charlie"];
-
-console.log(hasDuplicateStrings(names1)); // Output: true
+hasDuplicateStrings(all_names);
