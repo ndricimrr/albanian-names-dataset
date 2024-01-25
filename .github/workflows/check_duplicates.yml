@@ -1,4 +1,4 @@
-name: Check Duplicates Entered
+name: Check Duplicates Entered 1
 
 on:
   push:
