@@ -9,6 +9,10 @@ const female_names_path = "../male.json";
 const redColor = "\x1b[31m";
 // ANSI escape code to reset color
 const resetColor = "\x1b[0m";
+// ANSI escape code for green color
+const greenColor = "\x1b[32m";
+// ANSI escape code for yellow color
+const yellowColor = "\x1b[33m";
 
 try {
   // Check all names list duplicates
@@ -30,20 +34,41 @@ try {
 
 function hasDuplicateStrings(array, file_path) {
   const seen = {};
+  let duplicates = [];
 
   for (let i = 0; i < array.length; i++) {
     const currentString = array[i];
     if (seen[currentString]) {
-      console.error(
-        redColor +
-          "Duplicate Name Found: " +
-          resetColor +
-          currentString +
-          "\nFile: " +
-          file_path
-      );
-      process.exit(1);
+      duplicates.push(currentString);
     }
     seen[currentString] = true;
   }
+
+  if (duplicates.length > 0) {
+    for (let index = 0; index < duplicates.length; index++) {
+      const duplicate = duplicates[index];
+      console.error(
+        redColor +
+          "Duplicate Name found in file " +
+          yellowColor +
+          file_path +
+          resetColor +
+          " : " +
+          duplicate
+      );
+    }
+
+    process.exit(1);
+  }
+
+  console.log(
+    greenColor +
+      "✔ " +
+      resetColor +
+      "Finished scanning file: " +
+      yellowColor +
+      file_path +
+      resetColor +
+      ". No duplicates found"
+  );
 }
