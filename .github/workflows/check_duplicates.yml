@@ -15,9 +15,3 @@ jobs:
 
       - name: Run JS script for quality
         run: node scripts/code_quality.js
-
-      - name: Check script result
-        run: echo "::set-output name=SCRIPT_RESULT::$(node scripts/code_quality.js)"
-
-      - name: Fail if script returns false
-        run: exit ${{ steps.check-script.outputs.SCRIPT_RESULT == 'false' }}
