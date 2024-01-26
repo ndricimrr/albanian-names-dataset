@@ -4,6 +4,10 @@
   "description": "A curated list of albanian names for easy usage in open source projects",
   "main": "index.js",
   "scripts": {
+    "publish": "npm run publish",
+    "sort": "node scripts/sortFiles.js",
+    "merge": "node scripts/merge_names.js",
+    "check-duplicates": "node scripts/duplicates_check.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

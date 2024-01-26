@@ -43,6 +43,20 @@ function mergeLists(list1, list2, mergeFilePath) {
   const secondList = list2;
   let newList = firstList.concat(secondList);
 
+  const duplicatesCount = newList.length - new Set(newList).size;
+
+  if (duplicatesCount > 0) {
+    console.warn(
+      "Found duplicate names between the lists : " +
+        yellowColor +
+        duplicatesCount +
+        resetColor
+    );
+    console.warn("Removing duplicates before merging...");
+    // Remove duplicates
+    newList = Array.from(new Set(newList));
+  }
+
   // Custom sorting function for albanian alphabet
   const customSort = (a, b) => {
     const collator = new Intl.Collator("sq-AL", { sensitivity: "base" });
