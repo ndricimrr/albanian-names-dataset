@@ -26,7 +26,14 @@ function mergeLists(list1, list2, mergeFilePath) {
   const firstList = list1;
   const secondList = list2;
   let newList = firstList.concat(secondList);
-  newList.sort();
+
+  // Custom sorting function
+  const customSort = (a, b) => {
+    const collator = new Intl.Collator("sq-AL", { sensitivity: "base" });
+    return collator.compare(a, b);
+  };
+
+  newList.sort(customSort);
 
   try {
     console.log(newList);
