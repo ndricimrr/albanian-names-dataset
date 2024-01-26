@@ -5,13 +5,9 @@ const all_names_path = "../all_names.json";
 const male_names_path = "../female.json";
 const female_names_path = "../male.json";
 
-// ANSI escape code for red color
 const redColor = "\x1b[31m";
-// ANSI escape code to reset color
 const resetColor = "\x1b[0m";
-// ANSI escape code for green color
 const greenColor = "\x1b[32m";
-// ANSI escape code for yellow color
 const yellowColor = "\x1b[33m";
 
 try {
