@@ -25,12 +25,9 @@
 #           NODE_AUTH_TOKEN: ${{ secrets.ALB_NAMES_DATASET }}
 
 name: Publish Package to NPM
-# on:
-#   release:
-#     types: [published]
-
 on:
-  workflow_dispatch:
+  release:
+    types: [published]
 jobs:
   build:
     runs-on: ubuntu-latest
