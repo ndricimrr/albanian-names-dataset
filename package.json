@@ -1,6 +1,6 @@
 {
   "name": "albanian-names-dataset",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A curated dataset of albanian names for easy usage in open source projects",
   "main": "index.js",
   "scripts": {
