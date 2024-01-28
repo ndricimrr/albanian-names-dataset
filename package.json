@@ -4,7 +4,6 @@
   "description": "A curated dataset of albanian names for easy usage in open source projects",
   "main": "index.js",
   "scripts": {
-    "publish": "npm publish --access public",
     "build": "npm run sort && npm run merge",
     "sort": "node scripts/sortFiles.js",
     "merge": "node scripts/merge_names.js",
