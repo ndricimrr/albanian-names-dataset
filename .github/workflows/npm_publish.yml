@@ -2,10 +2,6 @@ name: Publish to NPM
 
 on:
   workflow_dispatch:
-    inputs:
-      version:
-        description: "NPM version"
-        required: true
 
 jobs:
   publish:
@@ -24,8 +20,6 @@ jobs:
         run: npm run build
 
       - name: Publish to npm
-        run: |
-          npm version ${{ github.event.inputs.version }}
-          npm run publish
+        run: npm run publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.ALB_NAMES_DATASET }}
