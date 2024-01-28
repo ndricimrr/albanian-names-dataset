@@ -43,7 +43,7 @@ function checkSorting(data, inputFilePath) {
     if (customSort(data[i - 1], data[i]) > 0) {
       console.error(
         redColor +
-          `File ${inputFilePath} is not sorted at index ${i - 1}.` +
+          `File ${inputFilePath} is not sorted at index ${i - 1}. ` +
           `Run 'npm run build' and commit the result again.\n` +
           resetColor
       );
