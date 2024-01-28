@@ -1,25 +1,47 @@
-name: Publish to NPM
+# name: Publish to NPM
+
+# on:
+#   workflow_dispatch:
+
+# jobs:
+#   publish:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v4
+
+#       # - name: Set up Node.js
+#       #   uses: actions/setup-node@v3
+#       #   with:
+#       #     node-version: '14'
+
+#       - name: Build Production Output
+#         run: npm run build
+
+#       - name: Publish to npm
+#         run: npm run publish
+#         env:
+#           NODE_AUTH_TOKEN: ${{ secrets.ALB_NAMES_DATASET }}
+
+name: Publish Package to NPM
+# on:
+#   release:
+#     types: [published]
 
 on:
   workflow_dispatch:
-
 jobs:
-  publish:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      # - name: Set up Node.js
-      #   uses: actions/setup-node@v3
-      #   with:
-      #     node-version: '14'
-
-      - name: Build Production Output
-        run: npm run build
-
-      - name: Publish to npm
-        run: npm run publish
+      - uses: actions/checkout@v4
+      # Setup .npmrc file to publish to npm
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+          registry-url: "https://registry.npmjs.org"
+      - run: npm run build
+      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.ALB_NAMES_DATASET }}
