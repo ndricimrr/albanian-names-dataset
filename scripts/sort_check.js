@@ -44,7 +44,7 @@ function checkSorting(data, inputFilePath) {
       console.error(
         redColor +
           `File ${inputFilePath} is not sorted at index ${i - 1}.` +
-          `\nRun 'npm run build' and commit the result again.\n` +
+          `Run 'npm run build' and commit the result again.\n` +
           resetColor
       );
       process.exit(1); // Exit with a non-zero status to indicate failure
