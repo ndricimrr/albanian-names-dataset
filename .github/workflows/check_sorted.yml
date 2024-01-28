@@ -1,4 +1,4 @@
-name: Check Duplicates Entered
+name: Check Sorted
 
 on:
   push:
@@ -8,12 +8,12 @@ on:
     branches:
       - "main"
 jobs:
-  check-duplicate-names:
+  check-names-sorted:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Check duplicates
-        run: npm run check-duplicates
+      - name: Check if files are sorted
+        run: npm run check-sorted
