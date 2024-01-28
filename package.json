@@ -1,10 +1,11 @@
 {
   "name": "albanian-names-dataset",
-  "version": "0.0.3",
-  "description": "A curated list of albanian names for easy usage in open source projects",
+  "version": "0.0.5",
+  "description": "A curated dataset of albanian names for easy usage in open source projects",
   "main": "index.js",
   "scripts": {
-    "publish": "npm run publish",
+    "publish": "npm publish --access public",
+    "build": "npm run sort && npm run merge",
     "sort": "node scripts/sortFiles.js",
     "merge": "node scripts/merge_names.js",
     "check-duplicates": "node scripts/duplicates_check.js",
@@ -26,5 +27,16 @@
   "bugs": {
     "url": "https://github.com/ndricimrr/albanian-names-dataset/issues"
   },
-  "homepage": "https://github.com/ndricimrr/albanian-names-dataset#readme"
+  "homepage": "https://github.com/ndricimrr/albanian-names-dataset#readme",
+  "files": [
+    "all_names.json",
+    "female.json",
+    "male.json"
+  ],
+  "contributors": [
+    {
+      "name": "ndricimrr",
+      "url": "https://github.com/ndricimrr"
+    }
+  ]
 }

@@ -1,0 +1,4 @@
+# # Ignore everything in the public folder
+# /public/*
+# # Except the package.json file
+# !/public/package.json
