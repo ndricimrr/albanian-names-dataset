@@ -8,7 +8,7 @@
     "sort": "node scripts/sortFiles.js",
     "merge": "node scripts/merge_names.js",
     "check-duplicates": "node scripts/duplicates_check.js",
-    "check-sorted": "node scripts/duplicates_check.js",
+    "check-sorted": "node scripts/check_sorted.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
