@@ -1,5 +1,5 @@
 [![MIT License](https://img.shields.io/badge/license-MIT-yellow)](https://opensource.org/license/mit)
-![NPM Published Version](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fndricimrr%2Falbanian-names-dataset%2Fmain%2Fpackage.json&query=%24.version&label=npm)
+![NPM Published Version](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fndricimrr%2Falbanian-names-dataset%2Fmain%2Fpackage.json&query=%24.version&label=npm&link=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Falbanian-names-dataset)
 
 # Albanian Names Dataset
 
